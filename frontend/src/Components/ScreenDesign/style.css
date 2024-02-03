@@ -1,3 +1,22 @@
+/* style.css */
+.design {
+  /* Add any global styles here */
+
+  @media only screen and (max-width: 768px) {
+    /* Styles for screens smaller than or equal to 768px wide */
+    /* Adjust as needed */
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for screens between 769px and 1024px wide */
+    /* Adjust as needed */
+  }
+
+  @media only screen and (min-width: 1025px) {
+    /* Styles for screens larger than 1024px wide */
+    /* Adjust as needed */
+  }
+}
 .design {
   background-color: #ffffff;
   border-radius: 50px;
@@ -954,11 +973,11 @@
 }
 
 .design .footer {
-  background-color: #313131;
-  height: 918px;
+  background-color: #fafafa;
+  height: auto;
   left: 22px;
   position: absolute;
-  top: 5217px;
+  top: auto;
   width: 1821px;
 }
 
@@ -1019,13 +1038,13 @@
   width: 114px;
 }
 
-.design .footer-links {
+/* .design .footer-links {
   height: 293px;
   left: 226px;
   position: absolute;
   top: 532px;
   width: 1402px;
-}
+} */
 
 .design .text-wrapper-20 {
   color: #ffffff;
@@ -1040,13 +1059,13 @@
   width: 386px;
 }
 
-.design .footer-links-2 {
+/* .design .footer-links-2 {
   height: 194px;
   left: 0;
   position: absolute;
   top: 0;
   width: 1400px;
-}
+} */
 
 .design .links {
   height: 187px;
@@ -1260,13 +1279,13 @@
   width: 125px;
 }
 
-.design .footer-links-3 {
+/* .design .footer-links-3 {
   height: 99px;
   left: 0;
   position: absolute;
   top: 0;
   width: 353px;
-}
+} */
 
 .design .text-wrapper-33 {
   color: #fafafa;

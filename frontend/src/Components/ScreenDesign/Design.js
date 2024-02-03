@@ -1,10 +1,12 @@
 import React from "react";
 import "./style.css";
-import Footer from "../Footer/Footer";
+import FooterComponent from "../Footer/Footer";
+import { Container } from 'react-bootstrap';
 
 
 export const Design = () => {
   return (
+    <Container fluid>
     <div className="design">
       <div className="overlap">
         <div className="div">
@@ -189,7 +191,6 @@ export const Design = () => {
               </div>
             </div>
           </div>
-          <Footer/>
         </div>
         <img
           className="pexels-daian-gan"
@@ -237,7 +238,11 @@ export const Design = () => {
           </div>
         </div>
       </div>
+      <footer className="footer">
+        <FooterComponent/>
+      </footer>
     </div>
+    </Container>
   );
 };
 
