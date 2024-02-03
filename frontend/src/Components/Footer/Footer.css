@@ -1,0 +1,35 @@
+/* Footer.css */
+
+.footer {
+    background-color: #313131;
+    height: 918px;
+    left: 22px;
+    position: absolute;
+    top: 5217px;
+    width: 1821px;
+  }
+  
+  .footer-links {
+    height: 293px;
+    left: 226px;
+    position: absolute;
+    top: 532px;
+    width: 1402px;
+  }
+  
+  .footer-links-2 {
+    height: 194px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1400px;
+  }
+  
+  .footer-links-3 {
+    height: 99px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 353px;
+  }
+  
