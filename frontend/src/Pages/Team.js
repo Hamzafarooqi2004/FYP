@@ -8,11 +8,14 @@ import jamshaidPic from "../images/jamshaidPic.jpg";
 import kabeerPic from "../images/kabeerPic.jpg";
 import waqasPic from "../images/waqasPic.jpg";
 import hassamPic from "../images/hassamPic.jpg";
+import Navbar from "../Components/Navbar";
 
 
 
 const AboutUs = () => {
   return (
+    <div>
+      <Navbar/>
     <div className="about-us">
       <div className="about-section">
         <div className="content">
@@ -115,6 +118,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

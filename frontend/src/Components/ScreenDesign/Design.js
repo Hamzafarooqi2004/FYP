@@ -1,11 +1,15 @@
 import React from "react";
 import "./style.css";
 import FooterComponent from "../Footer/Footer";
-import { Container } from 'react-bootstrap';
+import { Container, } from 'react-bootstrap';
+import Navbar from "../Navbar";
+
 
 
 export const Design = () => {
   return (
+    <div>
+      <Navbar/>
     <Container fluid>
     <div className="design">
       <div className="overlap">
@@ -243,6 +247,7 @@ export const Design = () => {
       </footer>
     </div>
     </Container>
+    </div>
   );
 };
 

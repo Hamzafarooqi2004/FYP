@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import React from "react";
 import FooterComponent from "../Components/Footer/Footer";
+import  Navbar from "../Components/Navbar";
 
 
 
 const ShopPage = () => {
   return (
-    <ShopPageRoot>
+    <div>
+      <Navbar/>
+      <ShopPageRoot>
       <Navigation1>
         <MiddleNav>
           <Logo>
@@ -633,6 +636,7 @@ const ShopPage = () => {
         <FooterComponent/>
       </Footer1>
     </ShopPageRoot>
+    </div>
   );
 };
 

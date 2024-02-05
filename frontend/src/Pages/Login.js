@@ -10,6 +10,7 @@ import {
 from 'mdb-react-ui-kit';
 import { useLogin } from '../Hooks/useLogin';
 import { Link, useNavigate } from 'react-router-dom';
+import  Navbar  from '../Components/Navbar';
 
 //import image from '../images/form pic.jpg';
 
@@ -34,6 +35,8 @@ function Login() {
   };
 
   return (
+    <div>
+      <Navbar />
     <MDBContainer fluid>
       <MDBRow>
         <MDBCol sm='6'>
@@ -69,7 +72,7 @@ function Login() {
               
               {error && <div className="error">{error}</div>}
 
-            <p className="small mb-5 pb-lg-3 ms-5"><a className="text-muted" href="#!">Forgot password?</a></p>
+            <p className="small mb-5 pb-lg-3 ms-5"><Link className="text-muted" to="/forgetPage">Forgot password?</Link></p>
             <p className='ms-5'>Don't have an account? <Link
                     to="/signup" className="link-info">Register here</Link></p>
 
@@ -85,6 +88,7 @@ function Login() {
       </MDBRow>
 
     </MDBContainer>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-//import scLogo from "../assets/scLogo.jpg";
+import scLogo from "../../images/jamshaidPic.jpg";
 
 const ProfileDetailsWrapper = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const StatsLabel = styled.span`
 function ProfileDetails() {
   return (
     <ProfileDetailsWrapper>
-      {/* <ProfileImage src={scLogo} /> */}
+      <ProfileImage src={scLogo} />
       <ProfileStats>
         <StatsBlock>
           <StatsNumber>9</StatsNumber>
