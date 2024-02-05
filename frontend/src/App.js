@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 //import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 // import { useLogout } from './Hooks/useLogout';
-import UploadArtWork from './Pages/uploadArtWork';
+import UploadArtWork from './Pages/UploadForm/uploadArtWork';
 import ShopPage from './Pages/ShowArt';
 import useAuthenticationContextHook from './Hooks/useAuthenticationContextHook';
 
