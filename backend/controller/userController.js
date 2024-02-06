@@ -1,6 +1,7 @@
 const User = require("../models/userSchema")
 // json web token
 const jwt=require("jsonwebtoken")
+const bcrypt=require("bcrypt")
 
 // creating own function in context of Json web token
 
@@ -51,9 +52,35 @@ const signUpUser = async (req, res) => {
     }
 };
 
+const forgetPassword = async (req, res) => {
+    const { email, newPassword } = req.body;
+    try {
+      const user = await User.findOne({ email });
+      if (!user) {
+        return res.status(400).json({ error: "User does not exist" });
+      }
+      console.log("HERE at the moment")
+      // Hash the new password
+      const saltValue = await bcrypt.genSalt(10);
+//      console.log(saltValue)
+      const hash = await bcrypt.hash(newPassword, saltValue);
+    //   console.log(hash)
+    //   console.log("HERE at the moment1")
+      // Update the user's password with the hashed version
+      user.password = hash;
+      await user.save();
+    //   console.log("HERE at the moment2")
+  
+      return res.status(200).json({ message: 'Password reset successful' });
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  };
 
 
 module.exports = {
     logInUser,
-    signUpUser
+    signUpUser,
+    forgetPassword
+
 }

@@ -5,16 +5,17 @@ require('dotenv').config()
 const mongoose=require('mongoose')
 
 const express=require('express')
-const {MongoClient} = require('mongodb');
+
 
 // for local db connection
 //const {connectToDb, getDb} = require('./connectDb')
 
 require("../backend/models/userSchema")
+require("../backend/models/artWork")
 
 const workoutRoutes = require("./routes/workouts")
 const userRoutes = require("./routes/users")
-
+const artworkRoutes = require("./routes/artWork")
 
 //making an instance of express 
 const app=express()
@@ -31,7 +32,7 @@ app.use('/api/workouts/',workoutRoutes)
 // using  users routes
 app.use('/api/users/',userRoutes)
 
-
+app.use('/api/artworks/', artworkRoutes)
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {

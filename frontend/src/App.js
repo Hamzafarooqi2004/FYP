@@ -8,6 +8,7 @@ import Team from "./Pages/Team";
 import Profile from "./Components/USer Profile/Profile";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 //import Home from './Pages/Home';
+<<<<<<< HEAD
 import Navbar from "./Components/Navbar";
 // import { useLogout } from './Hooks/useLogout';
 import UploadArtWork from "./Pages/uploadArtWork";
@@ -15,13 +16,28 @@ import ShopPage from "./Pages/ShowArt";
 import useAuthenticationContextHook from "./Hooks/useAuthenticationContextHook";
 
 import "./App.css";
+=======
+//import Navbar from './Components/Navbar';
+// import { useLogout } from './Hooks/useLogout';
+import UploadArtWork from './Pages/UploadForm/uploadArtWork';
+import ShopPage from './Pages/ShowArt';
+import useAuthenticationContextHook from './Hooks/useAuthenticationContextHook';
+import ForgetPage from './Pages/ForgetPage';
+
+import './App.css';
+>>>>>>> 92501d7d9e6f7f650e8467bfd8180348ba5468e3
 
 const App = () => {
   const { user } = useAuthenticationContextHook();
   return (
     <div className="App">
+<<<<<<< HEAD
       <BrowserRouter>
         {/* <Navbar /> */}
+=======
+    <BrowserRouter>
+      
+>>>>>>> 92501d7d9e6f7f650e8467bfd8180348ba5468e3
         <Routes>
           <Route path="/" element={<ShopPage />} />
 
@@ -47,6 +63,10 @@ const App = () => {
             path="/signup"
             element={!user ? <SignUp /> : <Navigate to="/login" />}
           />
+          <Route 
+            path="/forgetPage" 
+            element={<ForgetPage />} 
+          />
           <Route
             path="/login"
             element={!user ? <Login /> : <Navigate to="/login" />}
@@ -59,6 +79,7 @@ const App = () => {
             path="/profile"
             element={user ? <Profile /> : <Navigate to="/login" />}
           />
+
         </Routes>
       </BrowserRouter>
     </div>

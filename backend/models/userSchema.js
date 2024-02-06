@@ -80,10 +80,6 @@ userSchema.statics.logIn= async (email , password) => {
     }
 
     return user
-
-    
-
-
 }
 
 const User = mongoose.model("User" , userSchema)

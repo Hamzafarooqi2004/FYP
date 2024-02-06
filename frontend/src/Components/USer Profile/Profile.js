@@ -7,6 +7,7 @@ import ProfileButtons from "./ProfileButtons";
 // import Highlights from "./Highlights";
 import TopNav from "./TopNav";
 import PostGrid from "./PostGrid";
+import Navbar from "../Navbar";
 
 const ProfileWrapper = styled.div`
   background-color: #FFFFFF;
@@ -22,6 +23,8 @@ const ProfileWrapper = styled.div`
 
 function Profile() {
   return (
+    <div>
+      <Navbar />
     <ProfileWrapper>
       <TopNav />
       <ViewDashboard />
@@ -32,6 +35,7 @@ function Profile() {
       {/* <Tabs /> */}
       <PostGrid />
     </ProfileWrapper>
+    </div>
   );
 }
 

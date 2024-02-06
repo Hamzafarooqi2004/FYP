@@ -12,6 +12,7 @@ import './SignUp.css';
 import { useSignUp } from '../Hooks/useSignUp';
 import { useNavigate } from 'react-router-dom';
 //import image from '../images/form pic.jpg';
+import Navbar from '../Components/Navbar';
 
 function Login() {
 
@@ -34,6 +35,8 @@ function Login() {
     };
 
   return (
+    <div>
+      <Navbar />
     <MDBContainer fluid>
       <MDBRow>
 
@@ -86,6 +89,7 @@ function Login() {
       </MDBRow>
 
     </MDBContainer>
+    </div>
   );
 }
 
